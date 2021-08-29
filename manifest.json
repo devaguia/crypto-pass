@@ -5,6 +5,7 @@
     "description": "Encrypt and decrypt informations",
    
     "browser_action":{
+        "default_icon": "images/icon-01.png",
         "default_popup": "index.html"
     }
 }
