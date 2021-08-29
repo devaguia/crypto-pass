@@ -1,0 +1,10 @@
+{
+    "name": "Crypto Pass",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Encrypt and decrypt informations",
+   
+    "browser_action":{
+        "default_popup": "index.html"
+    }
+}

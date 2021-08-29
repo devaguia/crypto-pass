@@ -1,0 +1,81 @@
+.container {
+    width: 300px;
+    font-size: 14px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+label::selection, span::selection {
+    background-color: transparent;
+}
+.title {
+    margin: 0 0 10px 0;
+}
+
+.title img {
+    width: 50px;
+}
+.title span{
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    left: 70px;
+    top: 20px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.options {
+    margin: 10px 0 10px 0;
+}
+
+.option {
+    display: inline-block;
+}
+
+.option label:hover {
+    cursor: pointer;
+}
+.option input:hover {
+    cursor: pointer;
+}
+
+.field label{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.field {
+    margin: 10px 0 10px 0;
+}
+
+.field input{
+    width: 280px;
+    height: 25px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.submit-section {
+    margin: 5px 0 5px 0;
+}
+
+#submit-btn {
+    background-color: #3399ff;
+}
+
+#reset-btn {
+    background-color: #ff6666;
+}
+.submit-section input {
+    width: 145px;
+    height: 35px;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+}
+
+.submit-section input:hover {
+    cursor: pointer;
+    filter: brightness(1.20);
+}

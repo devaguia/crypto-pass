@@ -1,0 +1,9 @@
+{
+  "name": "crypto-pass",
+  "version": "1.0.0",
+  "description": "Encrypt and decrypt informations",
+  "main": "index.js",
+  "repository": "https://github/aguiarr/crypto-pass",
+  "author": "Matheus Aguiar",
+  "license": "GPL-3"
+}
