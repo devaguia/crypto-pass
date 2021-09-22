@@ -35,7 +35,6 @@
                 if ( name == 'operation' ) {
                     let selected = document.querySelector( '#selected-operation' );
                     selected.value = element.getAttribute('data-value');
-
                 }
                 
             } else {
@@ -49,14 +48,21 @@
 
         let input  = document.querySelector("#input-field");
         let output = document.querySelector("#output-field");
-        let type = document.querySelector( '#selected-type' );
+        let type   = document.querySelector( '#selected-type' );
         let operation = document.querySelector( '#selected-operation' );
         let result;
+        let key;
+
+        if ( document.querySelector("#key-field") ) {
+            key = document.querySelector("#key-field").value;
+        } else {
+            key = '';
+        }
 
         if (operation.value == 'encrypt') {
-            result = encrypt( input.value, type.value );
+            result = encrypt( input.value, key, type.value );
         } else {
-            result = decrypt( input.value, type.value );
+            result = decrypt( input.value, key, type.value );
         }
 
         if (typeof result == 'string') {
@@ -65,10 +71,9 @@
             output.value = result.toString();
         }
 
-        //CryptoJS.AES.decrypt(ciphertext, 'secret key 123');
-    })
+    } )
 
-    function encrypt( text, type ) {
+    function encrypt( text, key, type ) {
 
         let result;
         switch ( type ) {
@@ -79,13 +84,15 @@
                 result = CryptoJS.SHA256(text);
                 break;
             case 'aes':
-                result = CryptoJS.AES.encrypt(text, '');
+                result = CryptoJS.AES.encrypt(text, key);
                 break;
+            case 'basic':
+                result = btoa( text + ":" + key );
         }
         return result;
     }
 
-    function decrypt( text, type ) {
+    function decrypt( text, key, type ) {
 
         let result;
         switch ( type ) {
@@ -96,9 +103,11 @@
                 result = 'This operation not available.'
                 break;
             case 'aes':
-                bytes = CryptoJS.AES.decrypt(text, '');
+                bytes = CryptoJS.AES.decrypt(text, key);
                 result = bytes.toString(CryptoJS.enc.Utf8);
                 break;
+            case 'basic':
+                result = 'This operation not available.'
         }
         return result;
     }
@@ -109,14 +118,23 @@
         
         oprations.forEach(element => {
             element.checked = false;
+            element.disabled = false;
         });
 
         types.forEach(element => {
             element.checked = false;
+            element.disabled = false;
         });
 
         let input  = document.querySelector("#input-field");
         let output = document.querySelector("#output-field");
+
+        if ( document.querySelector("#key-field") ) {
+            let field = document.querySelector("#key-field").parentElement;
+            let parent = document.querySelector(".fields");
+            parent.removeChild( field.parentElement ); 
+        }
+
         input.value = '';
         output.value = '';
     })

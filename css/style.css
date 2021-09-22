@@ -79,3 +79,23 @@ label::selection, span::selection {
     cursor: pointer;
     filter: brightness(1.20);
 }
+
+#output-field {
+    width: 250px;
+    padding-right: 30px;
+}
+
+#copy-icon {
+    transition: .2s;
+    position: relative;
+    width: 20px;
+    left: 268px;
+    bottom: 25px;
+    opacity: 100%;
+}
+
+#copy-icon:hover {
+    transition: .2s;
+    cursor: pointer;
+    opacity: 70%;
+}

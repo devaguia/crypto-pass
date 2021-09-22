@@ -20,7 +20,7 @@
                 </div>
                 <div class="options operations">
                     <div class="option">
-                        <input type="checkbox" name="encrypt-option" data-value="encrypt" id="encrypt-option">
+                        <input type="checkbox" name="encrypt-option" data-value="encrypt" id="encrypt-option" checked>
                         <label for="encrypt-option">Encrypt</label>
                     </div>
                     <div class="option">
@@ -28,7 +28,7 @@
                         <label for="decrypt-option">Decrypt</label>
                     </div>
                     <div>
-                        <input type="hidden" name="selected-operation" id="selected-operation">
+                        <input type="hidden" name="selected-operation" id="selected-operation" value="encrypt">
                     </div>
                 </div>
             </div>
@@ -47,8 +47,12 @@
                     <label for="sha256-option">SHA256</label>
                 </div>
                 <div class="option">
-                    <input type="checkbox" name="aes-option" data-value="aes" id="aes-option">
+                    <input type="checkbox" name="aes-option" data-value="aes" id="aes-option" class="double-options">
                     <label for="aes-option">AES Simple</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" name="basic-option" data-value="basic" id="basic-option" class="double-options">
+                    <label for="basic-option">Baic Authentication</label>
                 </div>
                 <div>
                     <input type="hidden" name="selected-type" id="selected-type">
@@ -64,9 +68,12 @@
                     </div>
                 </div>
                 <div class="field">
-                    <label for="">Output</label>
+                    <label>Output</label>
                     <div>
-                        <input id="output-field"type="text">
+                        <input id="output-field" readonly type="text">
+                        <div>
+                            <img src="./images/copy.png" id="copy-icon" alt="Copy Icon">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,5 +87,6 @@
     </div>
     <script src="./js/lib/crypto-js.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/doubleFields.js"></script>
 </body>
 </html>
