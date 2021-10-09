@@ -5,5 +5,19 @@
   "main": "index.js",
   "repository": "https://github/aguiarr/crypto-pass",
   "author": "Matheus Aguiar",
-  "license": "GPL-3"
+  "license": "GPL-3",
+  "devDependencies": {
+    "node-sass": "~4.13.1",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.5",
+    "postcss-loader": "^3.0.0",
+    "postcss-modules": "^1.4.1"
+  },
+  "scripts": {
+    "build": "parcel build ./js/* --public-url ./",
+    "dev": "parcel watch ./js/* --public-url ./"
+  }
 }

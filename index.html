@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./lib/crypto-js.min.js"></script>
     <title>Crypto Pass</title>
 </head>
 <body>
@@ -39,7 +40,7 @@
             </div>
             <div class="options types">
                 <div class="option">
-                    <input type="checkbox" name="md5-option" data-value="md5" id="md5-option">
+                    <input type="checkbox" name="md5-option" data-value="md5" id="md5-option" checked>
                     <label for="md5-option">MD5</label>
                 </div>
                 <div class="option">
@@ -50,12 +51,8 @@
                     <input type="checkbox" name="aes-option" data-value="aes" id="aes-option" class="double-options">
                     <label for="aes-option">AES Simple</label>
                 </div>
-                <div class="option">
-                    <input type="checkbox" name="basic-option" data-value="basic" id="basic-option" class="double-options">
-                    <label for="basic-option">Baic Authentication</label>
-                </div>
                 <div>
-                    <input type="hidden" name="selected-type" id="selected-type">
+                    <input type="hidden" name="selected-type" id="selected-type" value="md5">
                 </div>
             </div>
         </div>
@@ -85,8 +82,6 @@
             </div>
         </div>
     </div>
-    <script src="./js/lib/crypto-js.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/doubleFields.js"></script>
+    <script src="./dist/index.js"></script>
 </body>
 </html>
