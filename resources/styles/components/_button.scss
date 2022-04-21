@@ -13,8 +13,7 @@
         &:hover {
             transition: .3s;
             cursor: pointer;
-            background-color: $btn-color;
-            opacity: 80%;
+            background-color: $btn-color !important;
             color: #fff;
         }
     }
