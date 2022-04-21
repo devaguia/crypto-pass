@@ -1,6 +1,6 @@
 {
   "name": "crypto-pass",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Encrypt and decrypt informations",
   "main": "dist/index.js",
   "repository": "https://github/aguiarr/crypto-pass",
