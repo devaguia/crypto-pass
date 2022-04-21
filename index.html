@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="./lib/crypto-js.min.js"></script>
     <title>Crypto Pass</title>
 </head>
 <body>
@@ -29,7 +28,7 @@
                 </div>
                 <div class="options operations">
                     <div class="option">
-                        <input type="radio" name="mode" data-value="encrypt" id="encrypt-option" checked>
+                        <input type="radio" name="mode" data-value="encrypt" id="encrypt-option">
                         <label for="encrypt-option">Encrypt</label>
                     </div>
                     <div class="option">
@@ -48,7 +47,7 @@
             </div>
             <div class="options types">
                 <div class="option">
-                    <input type="radio" name="option" data-value="md5" id="md5-option" checked>
+                    <input type="radio" name="option" data-value="md5" id="md5-option">
                     <label for="md5-option">MD5</label>
                 </div>
                 <div class="option">
@@ -73,9 +72,14 @@
                 </div>
                 <div class="field">
                     <div>
+                        <input id="input-key" class="input-disabled" type="text" placeholder="Key">
+                    </div>
+                </div>
+                <div class="field">
+                    <div>
                         <input id="output-field" readonly type="text" placeholder="Output">
                         <div class="copy">
-                            <i class="fa-solid fa-copy"></i>
+                            <i class="fa-solid fa-copy" id="copy-item"></i>
                         </div>
                     </div>
                 </div>
@@ -84,10 +88,10 @@
         <div class="section">
             <div class="submit-section">
                 <div>
-                    <input id="submit-btn" type="button" value="Go!">
+                    <input id="reset-btn" type="button" value="Reset">
                 </div>
                 <div>
-                    <input id="reset-btn" type="button" value="Reset">
+                    <input id="submit-btn" type="button" value="Go!">
                 </div>
             </div>
         </div>

@@ -2,15 +2,25 @@
     .field {
         margin: 10px 0;
         input {
-            width: 230px;
+            width: 220px;
             height: 30px;
             border: solid 1px $grey-color;
             border-radius: 5px;
 
             font-size: 14px;
             padding-left: 15px;
+            padding-right: 10px;
             outline: none;
             color: $text-color;
+        }
+
+        #output-field {
+            padding-right: 35px;
+            width: 195px;
+        }
+
+        .input-disabled {
+            display: none;
         }
 
         .copy {
@@ -18,7 +28,7 @@
             float: right;
             font-size: 18px;
             bottom: 28px;
-            right: 10px;
+            right: 15px;
             color: $copy-color;
 
             &:hover {

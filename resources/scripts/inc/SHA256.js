@@ -1,6 +1,8 @@
+import CryptoJS from "crypto-js";
+
 export class SHA256 {
     decrypt(label) {
-        return CryptoJS.SHA256.encrypt(label)
+        return CryptoJS.SHA256.encrypt(label);
     }
 
     encrypt(label) {

@@ -5,16 +5,18 @@ import { SHA256 } from "./inc/SHA256";
 
 export class CryptoPass
 {
-    constructor(text, key, method)
+    constructor(text, key, method, type)
     {
-        this._text =  text ? text : false;
-        this._key  =  key ? key : false;
+        this._text   =  text ? text : false;
+        this._key    =  key ? key : false;
         this._method =  method ? method : false;
+        this._type   =  type ? type : false;
     }
 
     encrypt() {
+        var result;
 
-        switch ( this._method ) {
+        switch ( this._type ) {
             case 'md5':
                 result = this.md5();
                 break;
@@ -34,8 +36,9 @@ export class CryptoPass
     }
 
     decrypt() {
-
-        switch ( this._method ) {
+        var result;
+        
+        switch ( this._type ) {
             case 'md5':
                 result = this.md5();
                 break;
@@ -58,7 +61,7 @@ export class CryptoPass
         const md5 = new MD5();
 
         if (this._method === "decrypt") {
-            return md5.encrypt(this._text);
+            return md5.decrypt(this._text);
         } else {
             return md5.encrypt(this._text);
         }
@@ -78,33 +81,41 @@ export class CryptoPass
         const aes = new AES();
         
         if (this._method === "decrypt") {
-            return aes.encrypt(this._text, this._key);
+            return aes.decrypt(this._text, this._key);
         } else {
             return aes.encrypt(this._text, this._key);
         }
     }
 
-    get _key () {
+    getKey () {
         return this._key
     }
 
-    set _key (value) {
+    setKey (value) {
         this._key = value;
     }
 
-    get _text () {
+    getText () {
         return this._text
     }
 
-    set _text (value) {
+    setText (value) {
         this._text = value;
     }
 
-    get _method () {
-        return this._text
+    getMethod () {
+        return this._method
     }
 
-    set _method (value) {
+    setMethod (value) {
         this._method = value;
+    }
+
+    getType () {
+        return this._tyoe
+    }
+
+    setType (value) {
+        this._type = value;
     }
 }
