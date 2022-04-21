@@ -1,0 +1,21 @@
+.submit-section {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 10px;
+    input {
+        width: 120px;
+        height: 35px;
+        border: solid 1px $btn-color;
+        border-radius: 5px;
+        background: transparent;
+        color: $btn-color;
+
+        &:hover {
+            transition: .3s;
+            cursor: pointer;
+            background-color: $btn-color;
+            opacity: 80%;
+            color: #fff;
+        }
+    }
+}
