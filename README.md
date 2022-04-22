@@ -12,14 +12,6 @@ Browser extension that encrypts and decrypts information.
 
 **Tag:** 2.0.0<br>
 **Description:** 
-- AES Simple type 
-- Auto copy button
-**Date:** 2021-10-09
-
-<hr>
-
-**Tag:** 3.0.0<br>
-**Description:** 
 - Refactoring features
 - Refactoring styles
 **Date:** 2022-04-21
