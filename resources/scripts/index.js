@@ -75,10 +75,14 @@ class Document {
 
     reset() {
         const btn = document.querySelector("#reset-btn");
+        const key = document.querySelector("#input-key");
 
         btn.addEventListener("click", () => {
             this.defaultMethods();
             this.defaultTypes();
+
+
+            key.classList.add("input-disabled");
         });
     }
 
