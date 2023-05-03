@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > div {
+        img {
+            width: 70px;
+        }
+
+        h1 {
+            font-size: 3em;
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+}

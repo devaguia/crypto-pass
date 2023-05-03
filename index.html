@@ -2,103 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./dist/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Crypto Pass</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/assets/styles/index.css">
+    <title>CryptoPass</title>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="title">
-                <span><strong>CRYPTO</strong>PASS</span>
-                <div>
-                    <img src="./images/icon-01.png" alt="Crypto Icon">
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="section">
             <div>
-                <div class="section-title">
-                    <span>OPERATIONS</span>
-                </div>
-                <div class="options operations">
-                    <div class="option">
-                        <input type="radio" name="mode" data-value="encrypt" id="encrypt-option">
-                        <label for="encrypt-option">Encrypt</label>
-                    </div>
-                    <div class="option">
-                        <input type="radio" name="mode" data-value="decrypt" id="decrypt-option">
-                        <label for="decrypt-option">Decrypt</label>
-                    </div>
-                    <div>
-                        <input type="hidden" name="selected-operation" id="selected-operation" value="encrypt">
-                    </div>
-                </div>
+                <img src="./assets/images/icon.svg" alt="CryptoPass Icon">
+            </div>
+            <div>
+                <h1><span>Crypto</span>Pass</h1>
             </div>
         </div>
-        <div class="section">
-            <div class="section-title">
-                <span>TYPES</span>
-            </div>
-            <div class="options types">
-                <div class="option">
-                    <input type="radio" name="option" data-value="md5" id="md5-option">
-                    <label for="md5-option">MD5</label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="option" data-value="sha256" id="sha256-option">
-                    <label for="sha256-option">SHA256</label>
-                </div>
-                <div class="option">
-                    <input type="radio" name="option" data-value="aes" id="aes-option" class="double-options">
-                    <label for="aes-option">AES</label>
-                </div>
-                <div>
-                    <input type="hidden" name="selected-type" id="selected-type" value="md5">
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="fields">
-                <div class="field">
+        <div class="content">
+            <div class="options">
+                <div class="operations">
+                    <h2>Operation</h2>
                     <div>
-                        <input id="input-field" type="text" placeholder="Input">
+                        <div class="operation">
+                            <input type="radio" name="operation" id="operation-encrypt">
+                            <label for="operation-encrypt">Encrypt</label>
+                        </div>
+                        <div class="operation">
+                            <input type="radio" name="operation" id="operation-decrypt">
+                            <label for="operation-decrypt">Decrypt</label>
+                        </div>
+                        <div class="operation">
+                            <input type="radio" name="operation" id="operation-ramdom">
+                            <label for="operation-ramdom">Random</label>
+                        </div>
                     </div>
                 </div>
-                <div class="field">
+                <div class="types">
+                    <h2>Types</h2>
                     <div>
-                        <input id="input-key" class="input-disabled" type="text" placeholder="Key">
-                    </div>
-                </div>
-                <div class="field">
-                    <div>
-                        <input id="output-field" readonly type="text" placeholder="Output">
-                        <div class="copy">
-                            <i class="fa-solid fa-copy" id="copy-item"></i>
+                        <div class="type">
+                            <input type="radio" name="type" id="type-md5">
+                            <label for="type-md5">MD5</label>
+                        </div>
+                        <div class="type">
+                            <input type="radio" name="type" id="type-aes">
+                            <label for="type-aes">AES</label>
+                        </div>
+                        <div class="type">
+                            <input type="radio" name="type" id="type-sha256">
+                            <label for="type-sha256">SHA256</label>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section">
-            <div class="submit-section">
+            <div class="fields">
                 <div>
-                    <input id="reset-btn" type="button" value="Reset">
+                    <input type="text" placeholder="Key">
                 </div>
                 <div>
-                    <input id="submit-btn" type="button" value="Go!">
+                    <input type="text" placeholder="Value">
+                </div>
+                <div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Data"></textarea>
                 </div>
             </div>
         </div>
+        <div class="buttons">
+            <div>
+                <input type="button" value="Reset">
+            </div>
+            <div>
+                <input type="button" value="Go!">
+            </div>
+        </div>
         <div class="footer">
-            <a href="https://github.com/aguiarrdev/crypto-pass"><span>About|Contribute</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
         </div>
     </div>
-    <script src="./dist/index.js"></script>
+    <script src="./dist/src/index.js"></script>
 </body>
 </html>

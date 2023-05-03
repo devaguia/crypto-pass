@@ -2,24 +2,20 @@
   "name": "crypto-pass",
   "version": "2.0.0",
   "description": "Encrypt and decrypt informations",
-  "main": "dist/index.js",
   "repository": "https://github/aguiarr/crypto-pass",
   "author": "Matheus Aguiar",
   "license": "GPL-3",
   "devDependencies": {
-    "node-sass": "^7.0.1",
-    "parcel-bundler": "^1.12.5",
-    "sass": "^1.42.1"
-  },
-  "dependencies": {
-    "autoprefixer": "^9.6.5",
+    "@parcel/transformer-sass": "^2.8.3",
+    "autoprefixer": "^10.4.14",
     "crypto-js": "^4.1.1",
-    "postcss-loader": "^3.0.0",
-    "postcss-modules": "^1.4.1",
-    "reverse-md5": "^0.0.5"
+    "parcel": "^2.8.3",
+    "postcss-loader": "^7.1.0",
+    "postcss-modules": "^6.0.0",
+    "sass": "^1.60.0"
   },
   "scripts": {
-    "build": "parcel build ./resources/* --public-url ./",
-    "dev": "parcel watch ./resources/* --public-url ./"
+    "build": "parcel build ./src/index.ts ./assets/styles/index.scss --public-url ./",
+    "dev": "parcel watch ./src/index.ts ./assets/styles/index.scss --public-url ./"
   }
 }

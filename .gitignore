@@ -1,7 +1,8 @@
 ## ignore folders
 node_modules/
 dist/
-.cache/
+.parcel-cache/
 
 ## ignore files
 *.lock
+*.log
