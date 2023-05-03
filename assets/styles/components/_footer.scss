@@ -1,2 +1,12 @@
 .footer {
+    margin: 10px 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        font-size: 12px;
+        text-decoration: none;
+        color: #a3a3a3;
+    }
 }
